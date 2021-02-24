@@ -166,7 +166,7 @@ export default function Setup() {
   }, [gameState, payer, history, location]);
 
   const loadingWallet = !!googleResponse;
-  const showWalletSetup = (loaded && !googleStatus) || error;
+  const showWalletSetup = (loaded && !googleStatus) || error || !ENABLE_TORUS;
   const showLoading = !showWalletSetup;
   return (
     <>
